@@ -7,8 +7,15 @@ import { NavController } from 'ionic-angular';
 })
 export class ContactPage {
 
+  contacts: any;
+
   constructor(public navCtrl: NavController) {
 
-  }
+    this.contacts = [
+        'George RR Martin',
+        'Obama',
+        'Elon Musk'
+    ];
 
+  }
 }
