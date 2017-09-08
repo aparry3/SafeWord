@@ -6,11 +6,13 @@ import { MyApp } from './app.component';
 import { ActivationPage } from '../pages/activation/activation';
 import { ContactPage } from '../pages/contact/contact';
 import { WordsPage } from '../pages/words/words';
+import { ProfilePage2 } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { EditWordsPage } from '../pages/edit-words/edit-words';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {DeactivationPage} from "../pages/deactivation/deactivation";
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     WordsPage,
     TabsPage,
-    EditWordsPage
+    EditWordsPage,
+    ProfilePage2,
+    DeactivationPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     WordsPage,
     TabsPage,
+<<<<<<< HEAD
     EditWordsPage
+=======
+    ProfilePage2,
+    DeactivationPage
+>>>>>>> master
   ],
   providers: [
     StatusBar,
