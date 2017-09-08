@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {DeactivationPage} from "../pages/deactivation/deactivation";
 
 @NgModule({
   declarations: [
@@ -18,8 +19,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ActivationPage,
     ContactPage,
     WordsPage,
+    TabsPage,
     ProfilePage2,
-    TabsPage
+    DeactivationPage
   ],
   imports: [
     BrowserModule,
@@ -31,8 +33,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ActivationPage,
     ContactPage,
     WordsPage,
+    TabsPage,
     ProfilePage2,
-    TabsPage
+    DeactivationPage
   ],
   providers: [
     StatusBar,
