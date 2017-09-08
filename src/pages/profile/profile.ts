@@ -7,24 +7,9 @@ import { NavController,  List } from 'ionic-angular';
 })
 export class ProfilePage2 {
 
-  words: any;
-
   constructor(public navCtrl: NavController) {
 
-    this.words = [
-      'Bread',
-      'Milk',
-      'Cheese',
-      'Snacks',
-      'Apples',
-      'Bananas',
-      'Peanut Butter',
-      'Chocolate',
-      'Avocado',
-      'Vegemite',
-      'Muffins',
-      'Paper towels'
-    ];
+
 
   }
 }
