@@ -36,7 +36,7 @@ import {DeactivationPage} from "../pages/deactivation/deactivation";
     ContactPage,
     WordsPage,
     TabsPage,
-    EditWordsPage
+    EditWordsPage,
     ProfilePage2,
     DeactivationPage
   ],
