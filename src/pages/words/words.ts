@@ -12,8 +12,6 @@ export class WordsPage {
 
   constructor(public navCtrl: NavController) {
 
-
-
     this.words = [
         'Bread',
         'Milk',
@@ -35,5 +33,13 @@ export class WordsPage {
     var newWord = this.addWordField
     this.words.push(newWord)
     console.log(newWord);
+  }
+
+  removeItem(word){
+  for(var i = 0; i < this.words.length; i++) {
+    if(this.words[i] == word){
+      this.words.splice(i, 1);
+    }
+  }
   }
 }
