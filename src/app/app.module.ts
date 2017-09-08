@@ -36,12 +36,9 @@ import {DeactivationPage} from "../pages/deactivation/deactivation";
     ContactPage,
     WordsPage,
     TabsPage,
-<<<<<<< HEAD
     EditWordsPage
-=======
     ProfilePage2,
     DeactivationPage
->>>>>>> master
   ],
   providers: [
     StatusBar,
