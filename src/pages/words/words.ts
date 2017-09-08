@@ -8,8 +8,11 @@ import { NavController,  List } from 'ionic-angular';
 export class WordsPage {
 
   words: any;
+  addWordField: string;
 
   constructor(public navCtrl: NavController) {
+
+
 
     this.words = [
         'Bread',
@@ -26,5 +29,11 @@ export class WordsPage {
         'Paper towels'
     ];
 
+  }
+
+  handleAddWord(){
+    var newWord = this.addWordField
+    this.words.push(newWord)
+    console.log(newWord);
   }
 }

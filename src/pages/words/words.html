@@ -9,4 +9,14 @@
   <ion-list>
       <ion-item *ngFor="let word of words">{{word}}</ion-item>
   </ion-list>
+
+  <ion-item>
+    <ion-textarea placeholder="Enter a new word" [(ngModel)]="addWordField"></ion-textarea>
+  </ion-item>
+
+  <button ion-button icon-end (click)='handleAddWord();'>
+    Add Word
+    <ion-icon name="bookmark"></ion-icon>
+  </button>
+
 </ion-content>
