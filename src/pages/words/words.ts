@@ -1,9 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController,  List } from 'ionic-angular';
 
+import { EditWordsPage } from '../edit-words/edit-words';
+
 @Component({
   selector: 'page-words',
-  templateUrl: 'words.html'
+  templateUrl: 'words.html',
+  entryComponents:[EditWordsPage]
 })
 export class WordsPage {
 
@@ -27,6 +30,7 @@ export class WordsPage {
         'Paper towels'
     ];
 
+
   }
 
   handleAddWord(){
@@ -39,7 +43,13 @@ export class WordsPage {
   for(var i = 0; i < this.words.length; i++) {
     if(this.words[i] == word){
       this.words.splice(i, 1);
+      }
     }
   }
+
+  editItem(word){
+    console.log('yoooo')
+    this.navCtrl.push(EditWordsPage);
   }
+
 }

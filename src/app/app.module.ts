@@ -7,6 +7,7 @@ import { ActivationPage } from '../pages/activation/activation';
 import { ContactPage } from '../pages/contact/contact';
 import { WordsPage } from '../pages/words/words';
 import { TabsPage } from '../pages/tabs/tabs';
+import { EditWordsPage } from '../pages/edit-words/edit-words';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,7 +18,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ActivationPage,
     ContactPage,
     WordsPage,
-    TabsPage
+    TabsPage,
+    EditWordsPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ActivationPage,
     ContactPage,
     WordsPage,
-    TabsPage
+    TabsPage,
+    EditWordsPage
   ],
   providers: [
     StatusBar,
