@@ -8,6 +8,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { WordsPage } from '../pages/words/words';
 import { ProfilePage2 } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
+import { EditWordsPage } from '../pages/edit-words/edit-words';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,6 +21,7 @@ import {DeactivationPage} from "../pages/deactivation/deactivation";
     ContactPage,
     WordsPage,
     TabsPage,
+    EditWordsPage,
     ProfilePage2,
     DeactivationPage
   ],
@@ -34,6 +36,7 @@ import {DeactivationPage} from "../pages/deactivation/deactivation";
     ContactPage,
     WordsPage,
     TabsPage,
+    EditWordsPage,
     ProfilePage2,
     DeactivationPage
   ],

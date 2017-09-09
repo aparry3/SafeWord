@@ -6,7 +6,33 @@
 
 <ion-content padding>
   <h2>Manage Words</h2>
+  <!-- <ion-list>
+      <ion-item *ngFor="let word of words; let i = index;">{{word}}</ion-item>
+  </ion-list> -->
+
   <ion-list>
-      <ion-item *ngFor="let word of words">{{word}}</ion-item>
+
+  <ion-item-sliding *ngFor="let word of words">
+
+    <ion-item>
+    {{word}}
+    </ion-item>
+
+    <ion-item-options>
+      <button primary (click)="editItem(word)">Edit</button>
+      <button danger (click)="removeItem(word)"><ion-icon md="trash"></ion-icon> Delete</button>
+    </ion-item-options>
+  </ion-item-sliding>
+
   </ion-list>
+
+  <ion-item>
+    <ion-textarea placeholder="Enter a new word" [(ngModel)]="addWordField"></ion-textarea>
+  </ion-item>
+
+  <button ion-button icon-end (click)='handleAddWord();'>
+    Add Word
+    <ion-icon name="bookmark"></ion-icon>
+  </button>
+
 </ion-content>
