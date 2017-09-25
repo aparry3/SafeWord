@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content padding style="background-color: #97DD6A;">
-  <ion-textarea placeholder="Enter a description"></ion-textarea>
+  <ion-textarea id="test" [(ngModel)]="matchString" placeholder="Enter a description"></ion-textarea>
   <button (click)="goToDeactivationPage()" ion-button round large color="listening"
           style="font-family: 'Helvetica Neue'; height: 200px; width: 200px; border-radius: 100%; font-size:30px; display: block; margin: auto; vertical-align: middle;">
     Listening

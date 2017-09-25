@@ -12,10 +12,12 @@ import { Observable } from 'rxjs/Observable';
 export class ActivationPage {
 
   matches: String[];
+  matchString = "";
   isRecording = false;
 
   constructor(public navCtrl: NavController, private speechRecognition: SpeechRecognition,
               private plt: Platform, private cd: ChangeDetectorRef) {
+    this.matchString = "matches?";
     this.startListening();
   }
 
@@ -42,8 +44,13 @@ export class ActivationPage {
     let options = {
       language: 'en-US'
     }
+    console.log("Listening......")
+    this.matchString = "listening for matches"
+
     this.speechRecognition.startListening().subscribe(matches => {
       this.matches = matches;
+      this.matchString = matches[0]
+      this.matchString = "match!"
       this.cd.detectChanges();
     });
     this.isRecording = true;

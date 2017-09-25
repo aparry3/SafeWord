@@ -26,6 +26,7 @@
         "@ionic-native/status-bar": "3.12.1",
         "@ionic/storage": "2.0.1",
         "cordova-browser": "^4.1.0",
+        "cordova-ios": "^4.4.0",
         "cordova-plugin-console": "^1.0.5",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-speechrecognition": "^1.1.2",
@@ -55,7 +56,8 @@
             "ionic-plugin-keyboard": {}
         },
         "platforms": [
-            "browser"
+            "browser",
+            "ios"
         ]
     }
 }
