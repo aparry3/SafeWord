@@ -20,7 +20,8 @@ export class ActivationPage {
         document.getElementById('insideButton').classList.remove('listeningButton');
         document.getElementById('insideButton').classList.add('inactiveButton');
         document.getElementById('activationButton').classList.remove('activated');
-        document.getElementById('activationButton').classList.add('deacti
-    });
+        document.getElementById('activationButton').classList.add('deactivated');
+      }
+    })
   }
 }
