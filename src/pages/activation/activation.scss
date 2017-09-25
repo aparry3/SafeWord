@@ -5,7 +5,7 @@ page-activation {
 
   .listeningButton {
     background-color: #67CF3B;
-    margin: 25% auto auto;
+    margin: 40% auto auto;
     font-family: 'Helvetica Neue';
     vertical-align: middle;
     height: 200px;
@@ -21,13 +21,13 @@ page-activation {
 
   .inactiveButton {
     background-color: #DE1D1D;
-    margin: 25% auto auto;
+    margin: 40% auto auto;
     font-family: 'Helvetica Neue';
+    vertical-align: middle;
     height: 200px;
     width: 200px;
     border-radius: 100%;
     font-size:30px;
     display: block;
-    vertical-align: middle;
   }
 }

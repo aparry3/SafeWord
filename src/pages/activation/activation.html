@@ -6,8 +6,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content id="activationButton" class="deactivated">
-  <button class="inactiveButton" id="insideButton" ion-button round large>
+<ion-content *ngIf="!active" class="deactivated">
+  <button type="button" (click) = "listening()" class="inactiveButton" ion-button round large>
     Inactive
+  </button>
+</ion-content>
+
+<ion-content *ngIf="active" class="activated">
+  <button type="button" (click) = "listening()" class="listeningButton" ion-button round large>
+    Listening
   </button>
 </ion-content>
