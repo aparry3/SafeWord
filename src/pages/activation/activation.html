@@ -6,9 +6,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding style="background-color: #97DD6A;">
-  <button (click)="goToDeactivationPage()" ion-button round large color="listening"
-          style="font-family: 'Helvetica Neue'; height: 200px; width: 200px; border-radius: 100%; font-size:30px; display: block; margin: auto; vertical-align: middle;">
+<ion-content *ngIf="!active" class="deactivated">
+  <button type="button" (click) = "listening()" class="inactiveButton" ion-button round large>
+    Inactive
+  </button>
+</ion-content>
+
+<ion-content *ngIf="active" class="activated">
+  <button type="button" (click) = "listening()" class="listeningButton" ion-button round large>
     Listening
   </button>
 </ion-content>
