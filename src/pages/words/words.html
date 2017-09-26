@@ -1,38 +1,28 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>SafeWords</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+      <ion-title>Manage</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="newWord()">
+                <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Manage Words</h2>
-  <!-- <ion-list>
-      <ion-item *ngFor="let word of words; let i = index;">{{word}}</ion-item>
-  </ion-list> -->
-
+<ion-content>
   <ion-list>
+      <ion-item-sliding *ngFor="let word of words">
 
-  <ion-item-sliding *ngFor="let word of words">
+          <ion-item>
+              {{word.data.text}}
+          </ion-item>
 
-    <ion-item>
-    {{word}}
-    </ion-item>
+          <ion-item-options>
+              <button ion-button color="primary" (click)="editItem(word)" icon-start><ion-icon name="create"></ion-icon>Edit</button>
+              <button ion-button icon-start color="danger" (click)="removeItem(word)"><ion-icon name="trash"></ion-icon>Delete</button>
+          </ion-item-options>
+      </ion-item-sliding>
 
-    <ion-item-options>
-      <button primary (click)="editItem(word)">Edit</button>
-      <button danger (click)="removeItem(word)"><ion-icon md="trash"></ion-icon> Delete</button>
-    </ion-item-options>
-  </ion-item-sliding>
-
-  </ion-list>
-
-  <ion-item>
-    <ion-textarea placeholder="Enter a new word" [(ngModel)]="addWordField"></ion-textarea>
-  </ion-item>
-
-  <button ion-button icon-end (click)='handleAddWord();'>
-    Add Word
-    <ion-icon name="bookmark"></ion-icon>
-  </button>
+    </ion-list>
 
 </ion-content>

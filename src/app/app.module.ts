@@ -12,18 +12,16 @@ import { EditWordsPage } from '../pages/edit-words/edit-words';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {DeactivationPage} from "../pages/deactivation/deactivation";
 
 @NgModule({
   declarations: [
     MyApp,
     ActivationPage,
+    EditWordsPage,
     ContactPage,
     WordsPage,
     TabsPage,
-    EditWordsPage,
-    ProfilePage2,
-    DeactivationPage
+    ProfilePage2
   ],
   imports: [
     BrowserModule,
@@ -33,12 +31,11 @@ import {DeactivationPage} from "../pages/deactivation/deactivation";
   entryComponents: [
     MyApp,
     ActivationPage,
+    EditWordsPage,
     ContactPage,
     WordsPage,
     TabsPage,
-    EditWordsPage,
-    ProfilePage2,
-    DeactivationPage
+    ProfilePage2
   ],
   providers: [
     StatusBar,
