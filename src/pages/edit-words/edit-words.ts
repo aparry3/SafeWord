@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { IonicPage, NavController, ViewController, NavParams } from 'ionic-angular';
 import { WordsPage } from '../words/words';
 
 /**
@@ -15,12 +15,24 @@ import { WordsPage } from '../words/words';
   templateUrl: 'edit-words.html',
 })
 export class EditWordsPage {
+    editing: boolean = false;
+    word: object;
+    constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+        this.editing = this.navParams.get('edit');
+        this.word = this.navParams.get('word') ? this.navParams.get('word') : {text: ''};
+    }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad EditWordsPage');
+    }
+    save() {
+        console.log("here")
+        this.viewCtrl.dismiss({word: this.word, cancel: false});
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad EditWordsPage');
-  }
+    }
+    cancel() {
+        this.viewCtrl.dismiss({word: this.word, cancel: true});
+
+    }
 
 }

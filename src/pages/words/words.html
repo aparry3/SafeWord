@@ -1,6 +1,11 @@
 <ion-header>
   <ion-navbar>
     <ion-title>SafeWords</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="newWord()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -15,24 +20,15 @@
   <ion-item-sliding *ngFor="let word of words">
 
     <ion-item>
-    {{word}}
+    {{word.data.text}}
     </ion-item>
 
     <ion-item-options>
-      <button primary (click)="editItem(word)">Edit</button>
-      <button danger (click)="removeItem(word)"><ion-icon md="trash"></ion-icon> Delete</button>
+      <button (click)="editItem(word)">Edit</button>
+      <button (click)="removeItem(word)"><ion-icon md="trash"></ion-icon> Delete</button>
     </ion-item-options>
   </ion-item-sliding>
 
   </ion-list>
-
-  <ion-item>
-    <ion-textarea placeholder="Enter a new word" [(ngModel)]="addWordField"></ion-textarea>
-  </ion-item>
-
-  <button ion-button icon-end (click)='handleAddWord();'>
-    Add Word
-    <ion-icon name="bookmark"></ion-icon>
-  </button>
 
 </ion-content>
