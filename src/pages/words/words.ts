@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController,  ModalController, NavParams, List } from 'ionic-angular';
-
+import { Storage } from '@ionic/storage';
 import { EditWordsPage } from '../edit-words/edit-words';
 
 @Component({
@@ -10,21 +10,25 @@ import { EditWordsPage } from '../edit-words/edit-words';
 })
 export class WordsPage {
 
-  words: any;
-  addWordField: string;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
-        this.words = [
-            {data: {text: 'Bread'}},
-            {data: {text: 'Butter'}}
-        ];
+  words: Array<object> = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+      public modalCtrl: ModalController, private storage: Storage) {
+        this.storage.get('words').then((val) => {
+            this.words = val;
+            if (!this.words || this.words == []) {
+                this.words = [];
+            }
+        });
   }
 
   removeItem(word){
-  for(var i = 0; i < this.words.length; i++) {
-    if(this.words[i] == word){
-      this.words.splice(i, 1);
+      for(var i = 0; i < this.words.length; i++) {
+          if(this.words[i] == word){
+              this.words.splice(i, 1);
+          }
       }
-    }
+      this.storage.set('words', this.words);
+
   }
 
   editItem(edit_word, is_new){
@@ -43,6 +47,7 @@ export class WordsPage {
                   console.log(this.words);
               }
           }
+          this.storage.set('words', this.words);
       });
       modal.present();
   }
