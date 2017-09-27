@@ -10,6 +10,8 @@ import { WordsPage } from '../pages/words/words';
 import { ProfilePage2 } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { EditWordsPage } from '../pages/edit-words/edit-words';
+import { EditContactPage } from '../pages/edit-contact/edit-contact';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,6 +21,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     ActivationPage,
     EditWordsPage,
+    EditContactPage,
     ContactPage,
     WordsPage,
     TabsPage,
@@ -34,6 +37,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     ActivationPage,
     EditWordsPage,
+    EditContactPage,
     ContactPage,
     WordsPage,
     TabsPage,
