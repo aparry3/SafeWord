@@ -18,6 +18,7 @@ export class ActivationPage {
   constructor(public navCtrl: NavController, private speechRecognition: SpeechRecognition,
               private plt: Platform, private cd: ChangeDetectorRef) {
     this.matchString = "matches?";
+    this.getPermission();
     this.startListening();
   }
 
@@ -26,6 +27,7 @@ export class ActivationPage {
   }
 
   stopListening() {
+    console.log("Stopped listening.")
     this.speechRecognition.stopListening().then(() => {
       this.isRecording = false;
     });
@@ -47,16 +49,18 @@ export class ActivationPage {
     console.log("Listening......")
     this.matchString = "listening for matches"
 
-    this.speechRecognition.startListening().subscribe(matches => {
+    this.speechRecognition.startListening(options).subscribe(matches => {
       this.matches = matches;
       this.matchString = matches[0]
       this.matchString = "match!"
       this.cd.detectChanges();
-    });
+    }, error => console.error(error));
+
     this.isRecording = true;
   }
 
   goToDeactivationPage() {
+    this.stopListening();
     this.navCtrl.push(DeactivationPage);
   }
 
