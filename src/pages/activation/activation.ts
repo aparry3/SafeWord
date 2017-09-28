@@ -59,8 +59,7 @@ export class ActivationPage {
 
     this.speechRecognition.startListening(options).subscribe(matches => {
       this.matches = matches;
-      this.matchString = matches[0]
-      this.matchString = "match!"
+      this.matchString = matches.join(' ');
       this.cd.detectChanges();
     }, error => console.error(error));
 
