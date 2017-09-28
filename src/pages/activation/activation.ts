@@ -46,8 +46,8 @@ export class ActivationPage {
     let options = {
       language: 'en-US'
     }
-    console.log("Listening......")
-    this.matchString = "listening for matches"
+    console.log("Listening......");
+    //setTimeout(this.stopListening(), 500);
 
     this.speechRecognition.startListening(options).subscribe(matches => {
       this.matches = matches;
