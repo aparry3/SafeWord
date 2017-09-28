@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-      <ion-title *ngIf='editing'>Edit {{word.text}}</ion-title>
+      <ion-title *ngIf='editing'>Edit {{contact.text}}</ion-title>
       <ion-buttons >
           <button ion-button (click)="cancel()">
               Cancel
@@ -26,22 +26,22 @@
 <ion-content padding>
     <ion-list>
         <ion-item>
-            <ion-label floating>Enter Word</ion-label>
-            <ion-input [(ngModel)]="word.text" type="text" placeholder="Enter Word"></ion-input>
+            <ion-label floating>Enter Contact</ion-label>
+            <ion-input [(ngModel)]="contact.name" type="text" placeholder="Enter Contact"></ion-input>
         </ion-item>
     </ion-list>
     <ion-list>
         <ion-item>
             <ion-label>Send Location</ion-label>
-            <ion-toggle [(ngModel)]="word.send_location" color="royal" checked="false"></ion-toggle>
+            <ion-toggle [(ngModel)]="contact.send_location" color="royal" checked="false"></ion-toggle>
         </ion-item>
         <ion-item>
             <ion-label>Record Audio</ion-label>
-            <ion-toggle [(ngModel)]="word.record_audio" color="royal" checked="false"></ion-toggle>
+            <ion-toggle [(ngModel)]="contact.record_audio" color="royal" checked="false"></ion-toggle>
         </ion-item>
         <ion-item>
             <ion-label>Delay</ion-label>
-            <ion-toggle [(ngModel)]="word.delay" color="royal" checked="false"></ion-toggle>
+            <ion-toggle [(ngModel)]="contact.delay" color="royal" checked="false"></ion-toggle>
         </ion-item>
     </ion-list>
 </ion-content>

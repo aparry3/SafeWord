@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { DeactivationPage } from '../deactivation/deactivation';
+import { ActivationPage } from '../activation/activation';
 import { ContactPage } from '../contact/contact';
 import { WordsPage } from '../words/words';
 import { ProfilePage2 } from '../profile/profile';
@@ -11,7 +11,7 @@ import { ProfilePage2 } from '../profile/profile';
 export class TabsPage {
 
   tab1Root = WordsPage;
-  tab2Root = DeactivationPage;
+  tab2Root = ActivationPage;
   tab3Root = ContactPage;
   tab4Root = ProfilePage2;
 

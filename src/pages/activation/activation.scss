@@ -1,5 +1,35 @@
 page-activation {
+  .activated {
+    background-color: #97DD6A
+  }
 
+  .listeningButton {
+    background-color: #67CF3B;
+    margin: 40% auto auto;
+    font-family: 'Helvetica Neue';
+    vertical-align: middle;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    font-size:30px;
+    display: block;
+  }
+
+  .deactivated {
+    background-color: #D55D5D;
+  }
+
+  .inactiveButton {
+    background-color: #DE1D1D;
+    margin: 40% auto auto;
+    font-family: 'Helvetica Neue';
+    vertical-align: middle;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    font-size:30px;
+    display: block;
+  }
 }
 
 $colors: (

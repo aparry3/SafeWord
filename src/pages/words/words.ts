@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController,  List } from 'ionic-angular';
-
+import { NavController,  ModalController, NavParams, List } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 import { EditWordsPage } from '../edit-words/edit-words';
 
 @Component({
@@ -10,46 +10,52 @@ import { EditWordsPage } from '../edit-words/edit-words';
 })
 export class WordsPage {
 
-  words: any;
-  addWordField: string;
-
-  constructor(public navCtrl: NavController) {
-
-    this.words = [
-        'Bread',
-        'Milk',
-        'Cheese',
-        'Snacks',
-        'Apples',
-        'Bananas',
-        'Peanut Butter',
-        'Chocolate',
-        'Avocado',
-        'Vegemite',
-        'Muffins',
-        'Paper towels'
-    ];
-
-
-  }
-
-  handleAddWord(){
-    var newWord = this.addWordField
-    this.words.push(newWord)
-    console.log(newWord);
+  words: Array<object> = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+      public modalCtrl: ModalController, private storage: Storage) {
+        this.storage.get('words').then((val) => {
+            this.words = val;
+            if (!this.words || this.words == []) {
+                this.words = [];
+            }
+        });
   }
 
   removeItem(word){
-  for(var i = 0; i < this.words.length; i++) {
-    if(this.words[i] == word){
-      this.words.splice(i, 1);
+      for(var i = 0; i < this.words.length; i++) {
+          if(this.words[i] == word){
+              this.words.splice(i, 1);
+          }
       }
-    }
+      this.storage.set('words', this.words);
+
   }
 
-  editItem(word){
-    console.log('yoooo')
-    this.navCtrl.push(EditWordsPage);
+  editItem(edit_word, is_new){
+      let orig_word = Object.assign({}, edit_word.data);
+      let modal = this.modalCtrl.create(EditWordsPage, {
+          word: edit_word.data,
+          edit: !is_new
+      });
+      modal.onDidDismiss(data => {
+          console.log(data);
+          edit_word.data = data.word;
+          if (data.cancel) {
+              edit_word.data = orig_word;
+              if (is_new) {
+                  this.removeItem(edit_word);
+                  console.log(this.words);
+              }
+          }
+          this.storage.set('words', this.words);
+      });
+      modal.present();
+  }
+  newWord(){
+      var new_word = {data: {text: ''}}
+      this.words.push(new_word)
+      this.editItem(new_word, true);
+
   }
 
 }

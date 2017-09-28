@@ -1,19 +1,20 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Contacts
     </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="newContact()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-      <ion-item *ngFor="let contact of contacts">{{contact}}</ion-item>
+      <ion-item *ngFor="let contact of contacts">{{contact.data.name}}</ion-item>
   </ion-list>
 
-  <button ion-button icon-end (click)='openFilters();'>
-    Add Contact
-    <ion-icon name="person-add"></ion-icon>
-  </button>
 
 </ion-content>

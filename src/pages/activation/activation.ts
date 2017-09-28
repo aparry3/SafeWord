@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
-import {DeactivationPage} from "../deactivation/deactivation";
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { ChangeDetectorRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-  selector: 'page-activation',
-  templateUrl: 'activation.html'
+    selector: 'page-activation',
+    templateUrl: 'activation.html'
 })
 export class ActivationPage {
+    active: boolean = false;
 
   matches: String[];
   matchString = "";
@@ -19,11 +19,19 @@ export class ActivationPage {
               private plt: Platform, private cd: ChangeDetectorRef) {
     this.matchString = "matches?";
     this.getPermission();
-    this.startListening();
   }
 
   isIos() {
     return this.plt.is('ios');
+  }
+
+  listening() {
+      this.active = !this.active;
+      if(this.active){
+        this.startListening();
+      } else {
+        this.stopListening();
+      }
   }
 
   stopListening() {
@@ -57,11 +65,6 @@ export class ActivationPage {
     }, error => console.error(error));
 
     this.isRecording = true;
-  }
-
-  goToDeactivationPage() {
-    this.stopListening();
-    this.navCtrl.push(DeactivationPage);
   }
 
 }

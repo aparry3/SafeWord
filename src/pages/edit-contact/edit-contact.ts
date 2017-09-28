@@ -1,7 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { IonicPage, NavController, ViewController, NavParams } from 'ionic-angular';
-import { WordsPage } from '../words/words';
-
+import { ContactPage } from '../contact/contact';
 /**
  * Generated class for the EditWordsPage page.
  *
@@ -10,15 +9,15 @@ import { WordsPage } from '../words/words';
  */
 
 @Component({
-  selector: 'page-edit-words',
-  templateUrl: 'edit-words.html',
+  selector: 'page-edit-contacts',
+  templateUrl: 'edit-contact.html',
 })
-export class EditWordsPage {
+export class EditContactPage {
     editing: boolean = false;
-    word: object;
+    contact: object;
     constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
         this.editing = this.navParams.get('edit');
-        this.word = this.navParams.get('word') ? this.navParams.get('word') : {text: ''};
+        this.contact = this.navParams.get('contact') ? this.navParams.get('contact') : {text: ''};
     }
 
     ionViewDidLoad() {
@@ -26,11 +25,11 @@ export class EditWordsPage {
     }
     save() {
         console.log("here")
-        this.viewCtrl.dismiss({word: this.word, cancel: false});
+        this.viewCtrl.dismiss({contact: this.contact, cancel: false});
 
     }
     cancel() {
-        this.viewCtrl.dismiss({word: this.word, cancel: true});
+        this.viewCtrl.dismiss({contact: this.contact, cancel: true});
 
     }
 
