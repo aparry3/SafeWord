@@ -3,6 +3,7 @@ import { NavController, Platform } from 'ionic-angular';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { ChangeDetectorRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { WordService } from '../../app/services/word-service'
 
 @Component({
     selector: 'page-activation',
@@ -14,10 +15,19 @@ export class ActivationPage {
   matches: String[];
   matchString = "";
   isRecording = false;
+  words: Array<object>;
 
   constructor(public navCtrl: NavController, private speechRecognition: SpeechRecognition,
-              private plt: Platform, private cd: ChangeDetectorRef) {
-    this.matchString = "matches?";
+              private plt: Platform, private cd: ChangeDetectorRef, public wordService: WordService) {
+    this.words = wordService.getWords();
+    console.log(this.words)
+    var wordsToMatch = "";
+
+    for(var i = 0; i < this.words.length; i++) {
+          wordsToMatch = wordsToMatch + this.words[i]['word'].get('text') + ' ';
+        }
+
+    this.matchString = wordsToMatch;
     this.getPermission();
   }
 
@@ -64,6 +74,17 @@ export class ActivationPage {
     }, error => console.error(error));
 
     this.isRecording = true;
+  }
+
+    match(matchString, wordsToMatch): Array<object>{
+      var matches = [];
+
+      for(var i = 0; i < this.words.length; i++) {
+            if(matchString.includes(this.words[i])){
+              matches.push(this.words[i]);
+            }
+          }
+      return matches;
   }
 
 }
