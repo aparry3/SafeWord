@@ -11,6 +11,7 @@ import { ProfilePage2 } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { EditWordsPage } from '../pages/edit-words/edit-words';
 import { EditContactPage } from '../pages/edit-contact/edit-contact';
+import { SettingsPage } from '../pages/settings/settings';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -25,7 +26,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     WordsPage,
     TabsPage,
-    ProfilePage2
+    ProfilePage2,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     WordsPage,
     TabsPage,
-    ProfilePage2
+    ProfilePage2,
+    SettingsPage
   ],
   providers: [
     StatusBar,
