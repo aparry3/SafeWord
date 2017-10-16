@@ -44,6 +44,15 @@ export class ActivationPage {
       }
   }
 
+  listening2() {
+      this.active = !this.active;
+      if(this.active){
+        this.listenLoop();
+      } else {
+        this.stopListening();
+      }
+  }
+
   stopListening() {
     console.log("Stopped listening.")
     this.speechRecognition.stopListening().then(() => {
@@ -72,8 +81,18 @@ export class ActivationPage {
       this.matchString = matches.join(' ');
       this.cd.detectChanges();
     }, error => console.error(error));
-
+    this.cd.detectChanges();
+    this.cd.markForCheck();
     this.isRecording = true;
+  }
+
+  listenLoop(){
+    while(this.active){
+      this.startListening();
+      setTimeout(this.stopListening(), 5000);
+      this.cd.detectChanges();
+      this.cd.markForCheck();
+    }
   }
 
     match(matchString, wordsToMatch): Array<object>{
@@ -86,5 +105,6 @@ export class ActivationPage {
           }
       return matches;
   }
+
 
 }
