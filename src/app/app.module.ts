@@ -20,7 +20,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { Observable } from 'rxjs/Observable';
 
-import{ WordService } from './services/word-service'
+import{ WordService } from './services/word-service';
+import{ ContactService } from './services/contact-service';
+import{ ProcedureService } from './services/procedure-service'
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import{ WordService } from './services/word-service'
   ],
   providers: [
     WordService,
+    ContactService,
+    ProcedureService,
     StatusBar,
     SplashScreen,
     SpeechRecognition,

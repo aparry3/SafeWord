@@ -19,7 +19,7 @@ export class ActivationPage {
 
   constructor(public navCtrl: NavController, private speechRecognition: SpeechRecognition,
               private plt: Platform, private cd: ChangeDetectorRef, public wordService: WordService) {
-    this.words = wordService.getWords();
+    this.words = this.wordService.getWords();
     console.log(this.words)
     var wordsToMatch = "";
 
@@ -55,6 +55,7 @@ export class ActivationPage {
 
   stopListening() {
     console.log("Stopped listening.")
+    console.log(this.words = this.wordService.getWords());
     this.speechRecognition.stopListening().then(() => {
       this.isRecording = false;
     });
@@ -87,6 +88,7 @@ export class ActivationPage {
   }
 
   listenLoop(){
+    console.log("Entering listen loop");
     while(this.active){
       this.startListening();
       setTimeout(this.stopListening(), 5000);
