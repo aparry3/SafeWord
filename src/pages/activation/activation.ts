@@ -3,6 +3,7 @@ import { NavController, Platform } from 'ionic-angular';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { ChangeDetectorRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { Storage } from '@ionic/storage';
 
 @Component({
     selector: 'page-activation',
@@ -16,9 +17,10 @@ export class ActivationPage {
   isRecording = false;
 
   constructor(public navCtrl: NavController, private speechRecognition: SpeechRecognition,
-              private plt: Platform, private cd: ChangeDetectorRef) {
+              private plt: Platform, private cd: ChangeDetectorRef, private storage: Storage) {
     this.matchString = "matches?";
     this.getPermission();
+    console.log(this.storage.get('words'));
   }
 
   isIos() {
@@ -61,9 +63,24 @@ export class ActivationPage {
       this.matches = matches;
       this.matchString = matches.join(' ');
       this.cd.detectChanges();
+      this.trigger(this.matchString)
     }, error => console.error(error));
 
     this.isRecording = true;
+  }
+
+  trigger(matchString){
+    var words = this.storage.get('words')
+    words.then(function(words){
+      for(var i = 0; i < words.length ; i++){
+        var word = words[i].data.text
+        console.log("checking " + word)
+        if(matchString.indexOf(word) !== -1){
+            console.log("triggered on " + word)
+        }
+      }
+
+    })
   }
 
 }

@@ -20,6 +20,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { Observable } from 'rxjs/Observable';
 
+import { SMS } from '@ionic-native/sms';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -51,6 +53,7 @@ import { Observable } from 'rxjs/Observable';
     StatusBar,
     SplashScreen,
     SpeechRecognition,
+    SMS,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
