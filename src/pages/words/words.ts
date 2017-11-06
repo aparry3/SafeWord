@@ -2,6 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController,  ModalController, NavParams, List } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { EditWordsPage } from '../edit-words/edit-words';
+import { WordService } from '../../app/services/word-service'
+import {Word} from '../../app/models/word';
 
 @Component({
   selector: 'page-words',
@@ -11,23 +13,19 @@ import { EditWordsPage } from '../edit-words/edit-words';
 export class WordsPage {
 
   words: Array<object> = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
-      public modalCtrl: ModalController, private storage: Storage) {
-        this.storage.get('words').then((val) => {
-            this.words = val;
-            if (!this.words || this.words == []) {
-                this.words = [];
-            }
-        });
+      public modalCtrl: ModalController, private storage: Storage, private wordService: WordService) {
+        this.words = wordService.getWords()
   }
 
   removeItem(word){
-      for(var i = 0; i < this.words.length; i++) {
-          if(this.words[i] == word){
-              this.words.splice(i, 1);
-          }
-      }
-      this.storage.set('words', this.words);
+    for(var i = 0; i < this.words.length; i++) {
+        if(this.words[i] == word){
+            this.words.splice(i, 1);
+        }
+    }
+    this.wordService.setWords(this.words);
 
   }
 
@@ -47,7 +45,7 @@ export class WordsPage {
                   console.log(this.words);
               }
           }
-          this.storage.set('words', this.words);
+          this.wordService.setWords(this.words);
       });
       modal.present();
   }

@@ -13,6 +13,7 @@ export class ContactPage {
   contacts: Array<object> = [];
   constructor(public navCtrl: NavController, public navParams: NavParams,
       public modalCtrl: ModalController, private storage: Storage) {
+
         this.storage.get('contacts').then((val) => {
             this.contacts = val;
             if (!this.contacts || this.contacts == []) {
