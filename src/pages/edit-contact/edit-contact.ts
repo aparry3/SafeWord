@@ -8,7 +8,6 @@ import { ContactPage } from '../contact/contact';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-edit-contacts',
   templateUrl: 'edit-contact.html',

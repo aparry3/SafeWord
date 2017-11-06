@@ -1,6 +1,6 @@
 {
   "name": "SafeWord",
-  "app_id": "",
+  "app_id": "fb212df8",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

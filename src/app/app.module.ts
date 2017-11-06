@@ -1,4 +1,5 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import { ChangeDetectorRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
@@ -16,6 +17,9 @@ import { SettingsPage } from '../pages/settings/settings';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { SpeechRecognition } from '@ionic-native/speech-recognition';
+import { Observable } from 'rxjs/Observable';
 
 @NgModule({
   declarations: [
@@ -49,6 +53,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    SpeechRecognition,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -9,7 +9,6 @@ import { WordsPage } from '../words/words';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-edit-words',
   templateUrl: 'edit-words.html',
