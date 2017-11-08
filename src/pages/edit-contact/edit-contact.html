@@ -13,7 +13,7 @@
               Cancel
           </button>
       </ion-buttons>
-      <ion-title *ngIf='!editing'>New Word</ion-title>
+      <ion-title *ngIf='!editing'>New Contact</ion-title>
       <ion-buttons end>
           <button ion-button (click)="save()">
               Save
@@ -32,13 +32,13 @@
 </ion-list>
     <ion-list>
         <ion-item>
-            <ion-label floating>Enter Contact</ion-label>
+            <ion-label>Enter Contact</ion-label>
             <ion-input [(ngModel)]="contact.name" type="text" placeholder="Enter Contact"></ion-input>
         </ion-item>
     </ion-list>
     <ion-list>
         <ion-item>
-            <ion-label floating>Enter Phone Number</ion-label>
+            <ion-label>Enter Phone Number</ion-label>
             <ion-input [(ngModel)]="contact.number" type="text" placeholder="Enter Phone Number"></ion-input>
         </ion-item>
     </ion-list>
@@ -55,5 +55,8 @@
             <ion-label>Delay</ion-label>
             <ion-toggle [(ngModel)]="contact.delay" color="royal" checked="false"></ion-toggle>
         </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item *ngFor="let word of words">{{word.text}}</ion-item>
     </ion-list>
 </ion-content>

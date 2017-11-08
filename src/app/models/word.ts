@@ -1,6 +1,5 @@
 export class Word {
     word: {};
-
     constructor(public text: string){
       this.word = {'text': text,
                     'procedures':[]}

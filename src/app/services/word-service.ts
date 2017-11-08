@@ -4,23 +4,21 @@ import { Storage } from '@ionic/storage';
 
 @Injectable()
 export class WordService {
-    words: Array<object>;
+    words: Array<any>;
 
-    constructor(private storage: Storage){
-      this.words = new Array<object>();
+    constructor(public storage: Storage){
+      this.words = new Array<any>();
 
     }
 
-    getWords(): Array<object>{
-      this.storage.get('words').then((val) => {
-          this.words = val;
+    getWords(): Promise<Array<any>> {
+      return this.storage.get('words').then((val) => {
+          this.words = val != undefined ? val.map(d => {return d.data;}) : null;
           if (!this.words || this.words == []) {
               this.words = [];
           }
+          return this.words;
       });
-      console.log("got words:")
-      console.log(this.words)
-      return this.words
     }
 
     setWords(words){

@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController,  ModalController, NavParams, List } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { EditContactPage } from '../edit-contact/edit-contact';
+import { ContactService } from '../../app/services/contact-service';
 
 @Component({
   selector: 'page-contacts',
@@ -12,13 +13,9 @@ export class ContactPage {
 
   contacts: Array<object> = [];
   constructor(public navCtrl: NavController, public navParams: NavParams,
-      public modalCtrl: ModalController, private storage: Storage) {
-
-        this.storage.get('contacts').then((val) => {
+      public modalCtrl: ModalController, private contactService: ContactService) {
+        contactService.getContacts().then((val) => {
             this.contacts = val;
-            if (!this.contacts || this.contacts == []) {
-                this.contacts = [];
-            }
         });
   }
 
@@ -28,7 +25,7 @@ export class ContactPage {
               this.contacts.splice(i, 1);
           }
       }
-      this.storage.set('contacts', this.contacts);
+      this.contactService.setContacts(this.contacts);
 
   }
 
@@ -48,7 +45,7 @@ export class ContactPage {
                   console.log(this.contacts);
               }
           }
-          this.storage.set('contacts', this.contacts);
+          this.contactService.setContacts(this.contacts);
       });
       modal.present();
   }

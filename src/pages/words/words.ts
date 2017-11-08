@@ -3,7 +3,7 @@ import { NavController,  ModalController, NavParams, List } from 'ionic-angular'
 import { Storage } from '@ionic/storage';
 import { EditWordsPage } from '../edit-words/edit-words';
 import { WordService } from '../../app/services/word-service'
-import {Word} from '../../app/models/word';
+import { Word } from '../../app/models/word';
 
 @Component({
   selector: 'page-words',
@@ -13,10 +13,12 @@ import {Word} from '../../app/models/word';
 export class WordsPage {
 
   words: Array<object> = [];
-
   constructor(public navCtrl: NavController, public navParams: NavParams,
       public modalCtrl: ModalController, private storage: Storage, private wordService: WordService) {
-        this.words = wordService.getWords()
+        wordService.getWords().then((d) => {
+            this.words = d;
+            console.log(d);
+        });
   }
 
   removeItem(word){
