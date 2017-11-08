@@ -21,6 +21,7 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { Observable } from 'rxjs/Observable';
 
 import { SMS } from '@ionic-native/sms';
+import { CallNumber } from '@ionic-native/call-number';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { SMS } from '@ionic-native/sms';
     SplashScreen,
     SpeechRecognition,
     SMS,
+    CallNumber,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
