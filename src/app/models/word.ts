@@ -1,25 +1,11 @@
 export class Word {
-    word: {};
-    constructor(public text: string){
-      this.word = {'text': text,
-                    'procedures':[]}
-    }
+    text: string;
+    record_audio: boolean = false;
+    send_location: boolean = false;
+    delay:boolean = false;
 
-    toObject(): object{
-      return this.word;
+    constructor(word: string) {
+        this.text = word;
     }
-
-    setProcedures(procs: Array<object>){
-      this.word['procedures'] = procs
-    }
-
-    setText(text: string){
-      this.word['text'] = text
-    }
-
-    setWord(newWord: object){
-      this.word = newWord;
-    }
-
 
 }

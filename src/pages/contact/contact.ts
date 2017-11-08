@@ -3,6 +3,7 @@ import { NavController,  ModalController, NavParams, List } from 'ionic-angular'
 import { Storage } from '@ionic/storage';
 import { EditContactPage } from '../edit-contact/edit-contact';
 import { ContactService } from '../../app/services/contact-service';
+import { Contact } from '../../app/models/contact';
 
 @Component({
   selector: 'page-contacts',
@@ -11,7 +12,7 @@ import { ContactService } from '../../app/services/contact-service';
 })
 export class ContactPage {
 
-  contacts: Array<object> = [];
+  contacts: Array<Contact> = [];
   constructor(public navCtrl: NavController, public navParams: NavParams,
       public modalCtrl: ModalController, private contactService: ContactService) {
         contactService.getContacts().then((val) => {
@@ -30,16 +31,17 @@ export class ContactPage {
   }
 
   editItem(edit_contact, is_new){
-      let orig_contact = Object.assign({}, edit_contact.data);
+      let orig_contact = new Contact('');
+      orig_contact = edit_contact;
       let modal = this.modalCtrl.create(EditContactPage, {
-          contact: edit_contact.data,
+          contact: edit_contact,
           edit: !is_new
       });
       modal.onDidDismiss(data => {
           console.log(data);
-          edit_contact.data = data.contact;
+          edit_contact = data.contact;
           if (data.cancel) {
-              edit_contact.data = orig_contact;
+              edit_contact = orig_contact;
               if (is_new) {
                   this.removeItem(edit_contact);
                   console.log(this.contacts);
@@ -50,7 +52,7 @@ export class ContactPage {
       modal.present();
   }
   newContact(){
-      var new_contact = {data: {name: ''}}
+      var new_contact = new Contact('');
       this.contacts.push(new_contact)
       this.editItem(new_contact, true);
 

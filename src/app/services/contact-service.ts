@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
-
+import { Contact } from '../models/contact';
 @Injectable()
 export class ContactService {
-    contacts: Array<any>;
+    contacts: Array<Contact>;
 
     constructor(public storage: Storage){
-      this.contacts = new Array<any>();
+      this.contacts = new Array<Contact>();
 
     }
 
-    getContacts(): Promise<Array<any>> {
+    getContacts(): Promise<Array<Contact>> {
       return this.storage.get('contacts').then((val) => {
           this.contacts = val;
           if (!this.contacts || this.contacts == []) {

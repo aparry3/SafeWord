@@ -2,6 +2,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { IonicPage, NavController, ViewController, NavParams } from 'ionic-angular';
 import { WordsPage } from '../words/words';
 import { ContactService } from '../../app/services/contact-service';
+import { Contact } from '../../app/models/contact';
+import { Word } from '../../app/models/word';
 
 /**
  * Generated class for the EditWordsPage page.
@@ -16,11 +18,11 @@ import { ContactService } from '../../app/services/contact-service';
 })
 export class EditWordsPage {
     editing: boolean = false;
-    word: object;
-    contacts: Array<object>;
+    word: Word;
+    contacts: Array<Contact>;
     constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, private contactService: ContactService) {
         this.editing = this.navParams.get('edit');
-        this.word = this.navParams.get('word') ? this.navParams.get('word') : {text: ''};
+        this.word = this.navParams.get('word') ? this.navParams.get('word') : new Word('');
         contactService.getContacts().then((d) => {
             this.contacts = d;
         });

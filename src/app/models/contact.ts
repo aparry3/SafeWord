@@ -1,21 +1,8 @@
 export class Contact {
-    contact: {};
+    name: string;
+    number: string;
 
-    constructor(public name: string){
-      this.contact = {'name':name,
-                    'number':'number'}
+    constructor(name: string) {
+        this.name = name;
     }
-
-    toObject(): object{
-      return this.contact;
-    }
-
-    setName(name: string){
-      this.contact['name'] = name
-    }
-
-    setNumber(number: string){
-      this.contact['number'] = number
-    }
-
 }
