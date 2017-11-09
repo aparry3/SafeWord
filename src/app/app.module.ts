@@ -12,7 +12,6 @@ import { ProfilePage2 } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { EditWordsPage } from '../pages/edit-words/edit-words';
 import { EditContactPage } from '../pages/edit-contact/edit-contact';
-import { SettingsPage } from '../pages/settings/settings';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -25,6 +24,9 @@ import{ WordService } from './services/word-service';
 import{ ContactService } from './services/contact-service';
 import{ ProcedureService } from './services/procedure-service'
 
+import { SMS } from '@ionic-native/sms';
+import { CallNumber } from '@ionic-native/call-number';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -34,8 +36,7 @@ import{ ProcedureService } from './services/procedure-service'
     ContactPage,
     WordsPage,
     TabsPage,
-    ProfilePage2,
-    SettingsPage
+    ProfilePage2
   ],
   imports: [
     BrowserModule,
@@ -51,8 +52,7 @@ import{ ProcedureService } from './services/procedure-service'
     ContactPage,
     WordsPage,
     TabsPage,
-    ProfilePage2,
-    SettingsPage
+    ProfilePage2
   ],
   providers: [
     WordService,
@@ -61,6 +61,8 @@ import{ ProcedureService } from './services/procedure-service'
     StatusBar,
     SplashScreen,
     SpeechRecognition,
+    SMS,
+    CallNumber,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

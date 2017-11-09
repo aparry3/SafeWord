@@ -84,6 +84,7 @@ export class ActivationPage {
       this.matches = matches;
       this.matchString = matches.join(' ');
       this.cd.detectChanges();
+      this.trigger(this.matchString)
     }, error => console.error(error));
     this.cd.detectChanges();
     this.cd.markForCheck();
@@ -111,5 +112,19 @@ export class ActivationPage {
       return matches;
   }
 
+
+  trigger(matchString){
+    var words = this.storage.get('words')
+    words.then(function(words){
+      for(var i = 0; i < words.length ; i++){
+        var word = words[i].data.text
+        console.log("checking " + word)
+        if(matchString.indexOf(word) !== -1){
+            console.log("triggered on " + word)
+        }
+      }
+
+    })
+  }
 
 }
