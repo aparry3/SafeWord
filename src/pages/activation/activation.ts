@@ -3,6 +3,7 @@ import { NavController, Platform } from 'ionic-angular';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { ChangeDetectorRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { WordService } from '../../app/services/word-service'
 
 @Component({
     selector: 'page-activation',
@@ -14,10 +15,19 @@ export class ActivationPage {
   matches: String[];
   matchString = "";
   isRecording = false;
+  words: Array<object>;
 
   constructor(public navCtrl: NavController, private speechRecognition: SpeechRecognition,
-              private plt: Platform, private cd: ChangeDetectorRef) {
-    this.matchString = "matches?";
+              private plt: Platform, private cd: ChangeDetectorRef, public wordService: WordService) {
+    this.words = this.wordService.getWords();
+    console.log(this.words)
+    var wordsToMatch = "";
+
+    for(var i = 0; i < this.words.length; i++) {
+          wordsToMatch = wordsToMatch + this.words[i]['word'].get('text') + ' ';
+        }
+
+    this.matchString = wordsToMatch;
     this.getPermission();
   }
 
@@ -34,8 +44,18 @@ export class ActivationPage {
       }
   }
 
+  listening2() {
+      this.active = !this.active;
+      if(this.active){
+        this.listenLoop();
+      } else {
+        this.stopListening();
+      }
+  }
+
   stopListening() {
     console.log("Stopped listening.")
+    console.log(this.words = this.wordService.getWords());
     this.speechRecognition.stopListening().then(() => {
       this.isRecording = false;
     });
@@ -62,8 +82,31 @@ export class ActivationPage {
       this.matchString = matches.join(' ');
       this.cd.detectChanges();
     }, error => console.error(error));
-
+    this.cd.detectChanges();
+    this.cd.markForCheck();
     this.isRecording = true;
   }
+
+  listenLoop(){
+    console.log("Entering listen loop");
+    while(this.active){
+      this.startListening();
+      setTimeout(this.stopListening(), 5000);
+      this.cd.detectChanges();
+      this.cd.markForCheck();
+    }
+  }
+
+    match(matchString, wordsToMatch): Array<object>{
+      var matches = [];
+
+      for(var i = 0; i < this.words.length; i++) {
+            if(matchString.includes(this.words[i])){
+              matches.push(this.words[i]);
+            }
+          }
+      return matches;
+  }
+
 
 }
