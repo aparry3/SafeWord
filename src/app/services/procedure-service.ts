@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { SMS } from '@ionic-native/sms';
+import { CallNumber } from '@ionic-native/call-number';
 
 @Injectable()
 export class ProcedureService {
@@ -8,10 +10,18 @@ export class ProcedureService {
     }
 
     consume(word){
-      var contact = word.get("contact");
-      var procedure = word.get("procedure");
+      if(word.record_audio == true){
+        console.log("recording audio")
+      }
 
-      console.log("contacting " + contact + " using procedure: " + procedure);
+      if(word.send_location == true){
+        console.log("sending location")
+      }
+
+      if(word.delay == true){
+        console.log("delaying")
+      }
+
     }
 
 }
