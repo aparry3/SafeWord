@@ -44,4 +44,10 @@
             <ion-toggle [(ngModel)]="word.delay" color="royal" checked="false"></ion-toggle>
         </ion-item>
     </ion-list>
+    <ion-list>
+        <ion-item *ngFor="let contact of contacts">
+            <ion-label>{{contact.name}}</ion-label>
+            <ion-checkbox (ionChange)="toggleContact(contact)" [checked]="contains(contact)"></ion-checkbox>
+        </ion-item>
+    </ion-list>
 </ion-content>

@@ -41,5 +41,19 @@ export class EditWordsPage {
         this.viewCtrl.dismiss({word: this.word, cancel: true});
 
     }
+    toggleContact(contact) {
+        if (this.contains(contact)) {
+            this.word.contacts = this.word.contacts.filter(c => {
+                return c.name != contact.name;
+            });
+        } else {
+            this.word.contacts.push(contact);
+        }
+    }
+    contains(word) {
+        return this.word.contacts.map(c => {
+            return c.name;
+        }).indexOf(word.name) > -1;
+    }
 
 }
