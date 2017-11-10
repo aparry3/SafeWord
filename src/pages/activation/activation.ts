@@ -101,30 +101,40 @@ export class ActivationPage {
     }
   }
 
-    match(matchString, wordsToMatch): Array<object>{
-      var matches = [];
-
-      for(var i = 0; i < this.words.length; i++) {
-            if(matchString.includes(this.words[i])){
-              matches.push(this.words[i]);
-            }
-          }
-      return matches;
-  }
-
-
   trigger(matchString){
-    var words = this.wordService.getWords()
-    words.then(function(words){
-      for(var i = 0; i < words.length ; i++){
-        var word = words[i].text
-        console.log("checking " + word)
-        if(matchString.indexOf(word) !== -1){
-            console.log("triggered on " + word)
+    var self = this
+    console.log("matchString: ", matchString)
+    this.wordService.getWords().then(function(wordObjects){
+      console.log('getWords returned' + wordObjects);
+      for(var i = 0; i < wordObjects.length ; i++) {
+        var text = wordObjects[i].text;
+        var word = wordObjects[i];
+        console.log("OBJ: ", word)
+        console.log("HEY text: ", text)
+        if (text && matchString) {
+          console.log('text and matchString exist')
+          text = text.toLowerCase();
+          if (!!~matchString.indexOf(text)) {
+            console.log('matched on ', text)
+            self.consume(wordObjects[i]);
+          }
         }
       }
+    });
+  }
 
-    })
+  consume(word){
+    if(word.record_audio == true){
+      console.log("recording audio")
+    }
+
+    if(word.send_location == true){
+      console.log("sending location")
+    }
+
+    if(word.delay == true){
+      console.log("delaying")
+    }
   }
 
 }
