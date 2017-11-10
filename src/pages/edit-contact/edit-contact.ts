@@ -27,6 +27,7 @@ export class EditContactPage {
             console.log(d);
             this.words = d;
         });
+        console.log(this.contact);
     }
 
     ionViewDidLoad() {
@@ -35,12 +36,27 @@ export class EditContactPage {
     }
     save() {
         console.log("here")
+        console.log(this.contact)
         this.viewCtrl.dismiss({contact: this.contact, cancel: false});
 
     }
     cancel() {
         this.viewCtrl.dismiss({contact: this.contact, cancel: true});
 
+    }
+    toggleWord(word) {
+        if (this.contains(word)) {
+            this.contact.words = this.contact.words.filter(w => {
+                return w.text != word.text;
+            });
+        } else {
+            this.contact.words.push(word);
+        }
+    }
+    contains(word) {
+        return this.contact.words.map(w => {
+            return w.text;
+        }).indexOf(word.text) > -1;
     }
 
 }

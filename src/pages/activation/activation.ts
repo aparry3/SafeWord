@@ -114,10 +114,10 @@ export class ActivationPage {
 
 
   trigger(matchString){
-    var words = this.storage.get('words')
+    var words = this.wordService.getWords()
     words.then(function(words){
       for(var i = 0; i < words.length ; i++){
-        var word = words[i].data.text
+        var word = words[i].text
         console.log("checking " + word)
         if(matchString.indexOf(word) !== -1){
             console.log("triggered on " + word)

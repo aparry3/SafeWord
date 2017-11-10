@@ -33,6 +33,7 @@ export class ContactPage {
   editItem(edit_contact, is_new){
       let orig_contact = new Contact('');
       orig_contact = edit_contact;
+      console.log(edit_contact);
       let modal = this.modalCtrl.create(EditContactPage, {
           contact: edit_contact,
           edit: !is_new
