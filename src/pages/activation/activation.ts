@@ -4,6 +4,7 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { ChangeDetectorRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { WordService } from '../../app/services/word-service'
+import { ProcedureService } from '../../app/services/procedure-service'
 import { Word } from '../../app/models/word';
 
 @Component({
@@ -19,7 +20,8 @@ export class ActivationPage {
   words: Array<Word>;
 
   constructor(public navCtrl: NavController, private speechRecognition: SpeechRecognition,
-              private plt: Platform, private cd: ChangeDetectorRef, public wordService: WordService) {
+              private plt: Platform, private cd: ChangeDetectorRef, public wordService: WordService,
+            public procService: ProcedureService) {
     this.wordService.getWords().then((d) => {
         this.words = d;
         console.log(this.words)
@@ -114,17 +116,14 @@ export class ActivationPage {
 
 
   trigger(matchString){
-    var words = this.wordService.getWords()
-    words.then(function(words){
+    this.wordService.getWords().then(function(words){
       for(var i = 0; i < words.length ; i++){
-        var word = words[i].text
-        console.log("checking " + word)
+        var word = words[i].text.toLowerCase()
         if(matchString.indexOf(word) !== -1){
-            console.log("triggered on " + word)
+            this.procService.consume(words[i])
         }
       }
-
-    })
+    });
   }
 
 }
