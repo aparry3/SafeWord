@@ -12,7 +12,7 @@ import { ProfilePage2 } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { EditWordsPage } from '../pages/edit-words/edit-words';
 import { EditContactPage } from '../pages/edit-contact/edit-contact';
-import { SettingsPage } from '../pages/settings/settings';
+//import { SettingsPage } from '../pages/settings/settings';  //deprecated
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -35,7 +35,7 @@ import{ ProcedureService } from './services/procedure-service'
     WordsPage,
     TabsPage,
     ProfilePage2,
-    SettingsPage
+ //   SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +52,7 @@ import{ ProcedureService } from './services/procedure-service'
     WordsPage,
     TabsPage,
     ProfilePage2,
-    SettingsPage
+ //   SettingsPage
   ],
   providers: [
     WordService,
