@@ -1,0 +1,39 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.safeword.test"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.safeword.test"
+        },
+        "cordova-plugin-speechrecognition": {
+            "PACKAGE_NAME": "com.safeword.test"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.safeword.test"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.safeword.test"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.safeword.test"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.safeword.test"
+        },
+        "cordova-sms-plugin": {
+            "PACKAGE_NAME": "com.safeword.test"
+        },
+        "mx.ferreyra.callnumber": {
+            "PACKAGE_NAME": "com.safeword.test"
+        }
+    },
+    "dependent_plugins": {}
+}
