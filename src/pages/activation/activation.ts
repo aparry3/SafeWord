@@ -5,6 +5,7 @@ import { ChangeDetectorRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { WordService } from '../../app/services/word-service'
 import { Word } from '../../app/models/word';
+import { SMS } from '@ionic-native/sms';
 
 @Component({
     selector: 'page-activation',
@@ -19,7 +20,8 @@ export class ActivationPage {
   words: Array<Word>;
 
   constructor(public navCtrl: NavController, private speechRecognition: SpeechRecognition,
-              private plt: Platform, private cd: ChangeDetectorRef, public wordService: WordService) {
+              private plt: Platform, private cd: ChangeDetectorRef, public wordService: WordService,
+            public sms: SMS) {
     this.wordService.getWords().then((d) => {
         this.words = d;
         console.log(this.words)
@@ -130,6 +132,7 @@ export class ActivationPage {
 
     if(word.send_location == true){
       console.log("sending location")
+        this.sms.send('4043459807', 'Hello world!');
     }
 
     if(word.delay == true){
