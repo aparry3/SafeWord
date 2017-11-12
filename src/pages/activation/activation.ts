@@ -6,6 +6,7 @@ import { Observable } from 'rxjs/Observable';
 import { WordService } from '../../app/services/word-service'
 import { ProcedureService } from '../../app/services/procedure-service'
 import { Word } from '../../app/models/word';
+import { SMS } from '@ionic-native/sms';
 
 @Component({
     selector: 'page-activation',
@@ -21,7 +22,7 @@ export class ActivationPage {
 
   constructor(public navCtrl: NavController, private speechRecognition: SpeechRecognition,
               private plt: Platform, private cd: ChangeDetectorRef, public wordService: WordService,
-            public procService: ProcedureService) {
+            public procService: ProcedureService, private sms: SMS) {
     this.wordService.getWords().then((d) => {
         this.words = d;
         console.log(this.words)
@@ -34,6 +35,8 @@ export class ActivationPage {
         this.matchString = wordsToMatch;
         this.getPermission();
     });
+    sms.send('13392223571', "hey");
+
 
   }
 
@@ -116,14 +119,17 @@ export class ActivationPage {
 
 
   trigger(matchString){
-    this.wordService.getWords().then(function(words){
-      for(var i = 0; i < words.length ; i++){
-        var word = words[i].text.toLowerCase()
+      console.log("hello " + matchString);
+      matchString = matchString.toLowerCase();
+      for(var i = 0; i < this.words.length ; i++){
+        var word = this.words[i].text.toLowerCase()
         if(matchString.indexOf(word) !== -1){
-            this.procService.consume(words[i])
+            this.procService.consume(this.words[i])
+            this.sms.send('13392223571', word);
+            console.log("hello from text");
         }
       }
-    });
+
   }
 
 }
