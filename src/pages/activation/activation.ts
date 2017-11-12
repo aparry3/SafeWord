@@ -35,7 +35,6 @@ export class ActivationPage {
         this.matchString = wordsToMatch;
         this.getPermission();
     });
-    sms.send('13392223571', "hey");
 
 
   }
@@ -124,12 +123,29 @@ export class ActivationPage {
       for(var i = 0; i < this.words.length ; i++){
         var word = this.words[i].text.toLowerCase()
         if(matchString.indexOf(word) !== -1){
-            this.procService.consume(this.words[i])
-            this.sms.send('13392223571', word);
+            this.consume(this.words[i])
             console.log("hello from text");
         }
       }
 
   }
+
+  consume(word){
+    if(word.record_audio == true){
+      console.log("recording audio")
+    }
+
+    if(word.send_location == true){
+      console.log("sending location")
+      this.sms.send('14043459807', word.text);
+    }
+
+    if(word.delay == true){
+      console.log("delaying")
+    }
+
+  }
+
+
 
 }
