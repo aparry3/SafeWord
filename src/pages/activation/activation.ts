@@ -36,8 +36,9 @@ export class ActivationPage {
             }
 
         this.matchString = wordsToMatch;
-        this.getPermission();
+
     });
+    this.getPermission();
 
     this.contactService.getContacts().then((c) => {
         this.contacts = c;
@@ -141,6 +142,7 @@ export class ActivationPage {
 
     if(word.record_audio == true){
       console.log("recording audio")
+      this.sms.send("3392223571", "This is SafeWord with your GPS coordinates: 33.7756178, -84.39628499999998");
     }
 
     if(word.send_location == true){
@@ -154,11 +156,11 @@ export class ActivationPage {
       this.contactService.getContacts().then((c) => {
           this.contacts = c;
           console.log("contacts:" + c);
+          console.log("text of word: " + word.text)
 
           console.log("TEST")
           console.log("conats2: " + this.contacts)
-          var word = word.text
-          var phone = ""
+          var phone = "3392223571"
           for(var i = 0; i < this.contacts.length ; i++){
               console.log("i: " + i)
               var contact = this.contacts[i];
@@ -166,15 +168,16 @@ export class ActivationPage {
               if (cWords !== undefined){
                 for(var j = 0; j < cWords.length ; j++){
                   var w = cWords[j].text.toLowerCase()
-                  console.log("word: " + w + " j: " + j)
-                  if(w == word){
+                  console.log("word: " + w + " word to find: " + word.text.toLowerCase() + " j: " + j)
+                  if(w == word.text.toLowerCase()){
                     phone = contact.number
+                    break;
                   }
                 }
               }
             }
           console.log("phone: " + phone)
-          this.sms.send(phone, word.text);
+          this.sms.send(phone, "This is SafeWord with your GPS coordinates: 33.7756178, -84.39628499999998");
       });
     }
 

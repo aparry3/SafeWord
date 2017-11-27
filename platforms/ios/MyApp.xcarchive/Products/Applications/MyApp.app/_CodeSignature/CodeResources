@@ -86,11 +86,11 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		Ql24duG7Q8rWvdyr/fzpXxmVME8=
+		GAIVtvB0MyZSmR0DW/g3ddadBu4=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		WA7u1pq3DO3uQ1ntveNUoRoc5N8=
+		EfDwiddcX3rBMH0VGiPhOxOeOoI=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -98,11 +98,11 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		diNDWHrF2OFLZu/AQcOC+2U57u8=
+		KYXON4IcRTvhPAgajMTadZiuiWY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		fFXJ3HRLx+30ZUJdVSR9K/ueXoc=
+		P/5sQfETlFd9S1oRyjfpxL9eHFg=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -162,7 +162,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		iE6hMlFa15rc3wziuLk8p+925oE=
+		CWvAuP/JJH8J8+18hwtCeuoVZTs=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -174,11 +174,11 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		QAsvcHR7ZAH8mCG7PXkTmvh6RU0=
+		ofQDvRKZIYb5mNSZPlEOF8RCvno=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		pwxA3bgk7TvNTLfbdxFPlwSnFlY=
+		qIhGKRI2OeRArtlMnhz/9bjMfV0=
 		</data>
 		<key>www/assets/fonts/ionicons.woff</key>
 		<data>
@@ -230,7 +230,7 @@
 		</data>
 		<key>www/build/main.js</key>
 		<data>
-		aoNNxzHbzjLem9eUMTjN/jSUzmo=
+		cmpZjsuzffuUkHigkbZ9mtHuJ7U=
 		</data>
 		<key>www/build/polyfills.js</key>
 		<data>
@@ -242,7 +242,7 @@
 		</data>
 		<key>www/build/vendor.js</key>
 		<data>
-		SYcSjChWLLOrkxbeFYFBeDok3o4=
+		JLqXpUv5fgGv6pI7zc9bw95K4Js=
 		</data>
 		<key>www/cordova-js-src/exec.js</key>
 		<data>
@@ -258,7 +258,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		BJXkT0y8+gPlRRC6P/gEOMHLqIo=
+		Z79/KAoCCLLYHMMen2hciwsQ/sQ=
 		</data>
 		<key>www/index.html</key>
 		<data>
@@ -279,22 +279,6 @@
 		<key>www/plugins/cordova-plugin-device/www/device.js</key>
 		<data>
 		DgD9WKGqlbNViEZBSi4Wenbl/uM=
-		</data>
-		<key>www/plugins/cordova-plugin-geolocation/www/Coordinates.js</key>
-		<data>
-		B+vlNAwNL/8E91a2w8xN/QZtP9o=
-		</data>
-		<key>www/plugins/cordova-plugin-geolocation/www/Position.js</key>
-		<data>
-		1DZ/xrP/zFT+anCeCYYt+uuQIyU=
-		</data>
-		<key>www/plugins/cordova-plugin-geolocation/www/PositionError.js</key>
-		<data>
-		NZQ0MpOiURNiYMJS79+bdtSDnzI=
-		</data>
-		<key>www/plugins/cordova-plugin-geolocation/www/geolocation.js</key>
-		<data>
-		DBMSf1DRKjXfKMDgaSJHjnx+wgI=
 		</data>
 		<key>www/plugins/cordova-plugin-speechrecognition/www/speechRecognition.js</key>
 		<data>
@@ -318,7 +302,7 @@
 		</data>
 		<key>www/plugins/mx.ferreyra.callnumber/www/CallNumber.js</key>
 		<data>
-		vseVntvaPSlb3WtJIVPI/BtKyjE=
+		1WqZ90RZohTT4AL1hKm779zEohA=
 		</data>
 		<key>www/service-worker.js</key>
 		<data>
@@ -551,22 +535,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ql24duG7Q8rWvdyr/fzpXxmVME8=
+			GAIVtvB0MyZSmR0DW/g3ddadBu4=
 			</data>
 			<key>hash2</key>
 			<data>
-			UOcidK8RfJ4iQgcDamlccYgb5T4bgItybqLKJfcMNa4=
+			9MZJj0hlBViAX/2hHaEYd8E8G02hC1wKrt+VhD//51c=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WA7u1pq3DO3uQ1ntveNUoRoc5N8=
+			EfDwiddcX3rBMH0VGiPhOxOeOoI=
 			</data>
 			<key>hash2</key>
 			<data>
-			SFLtzDp8rP0ow0Ay4l5t8jeno18kS7hY5BNwYFyEINg=
+			bVTYXSW/c6KQXh4qhsnxw8Eg/8b1zzck/oI73nr5RP8=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -584,11 +568,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			diNDWHrF2OFLZu/AQcOC+2U57u8=
+			KYXON4IcRTvhPAgajMTadZiuiWY=
 			</data>
 			<key>hash2</key>
 			<data>
-			uxAfz+zsozkXuAm3oatiL/YyI8wopaTOyTWpra8p+9M=
+			dN131RS1qUqMuNXf+RcfRWCd3Gc32zSnrUl1YoF8+yY=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -749,11 +733,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iE6hMlFa15rc3wziuLk8p+925oE=
+			CWvAuP/JJH8J8+18hwtCeuoVZTs=
 			</data>
 			<key>hash2</key>
 			<data>
-			imfh4B7kq3W/FhqbDM2rGgot/SkTBxhN7zllhGxK+nQ=
+			tyWKj3KKn432q9awHhKnmevTTXao9opQkejeaksaOXk=
 			</data>
 		</dict>
 		<key>archived-expanded-entitlements.xcent</key>
@@ -771,22 +755,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QAsvcHR7ZAH8mCG7PXkTmvh6RU0=
+			ofQDvRKZIYb5mNSZPlEOF8RCvno=
 			</data>
 			<key>hash2</key>
 			<data>
-			S8kLXaG8OQi2rDL1h1IynHhMVG9xh6BTEhflXLVmj2M=
+			Y538XxCTTiwUUBbNk77yhtncpgj3kliJhIE+bz1wT6g=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pwxA3bgk7TvNTLfbdxFPlwSnFlY=
+			qIhGKRI2OeRArtlMnhz/9bjMfV0=
 			</data>
 			<key>hash2</key>
 			<data>
-			QgNI03Y3HxP6qVZYqrIkY2EXYgVZr/irOBe/K0ZzHE8=
+			zRY8rFGoGasM6kDy22kSq7OQFzn7BIuWY5qUzgDriYM=
 			</data>
 		</dict>
 		<key>www/assets/fonts/ionicons.woff</key>
@@ -925,11 +909,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aoNNxzHbzjLem9eUMTjN/jSUzmo=
+			cmpZjsuzffuUkHigkbZ9mtHuJ7U=
 			</data>
 			<key>hash2</key>
 			<data>
-			5SK487BFKz5dYEx9V14WS7R9N2vyE1S19MP21KnhmcU=
+			1bVPddM3BtWhHif6d5Z30dk3+8NMZdL1aEqHWLaVgEA=
 			</data>
 		</dict>
 		<key>www/build/polyfills.js</key>
@@ -958,11 +942,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SYcSjChWLLOrkxbeFYFBeDok3o4=
+			JLqXpUv5fgGv6pI7zc9bw95K4Js=
 			</data>
 			<key>hash2</key>
 			<data>
-			UjB5ktoVmunt6wbPtnh1VtZ+Pmbtxg8pQ6m+S4aWomA=
+			Zkk0jn75VgMY6okZDQVbsV91g4UoSEUoWVWL+3t7SGc=
 			</data>
 		</dict>
 		<key>www/cordova-js-src/exec.js</key>
@@ -1002,11 +986,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BJXkT0y8+gPlRRC6P/gEOMHLqIo=
+			Z79/KAoCCLLYHMMen2hciwsQ/sQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			IQM06QIxIRMtxOEmfHAaaq63cGAnRtcxrFizqgL/eGk=
+			5OahudzUJRtK4yMs05dAnwEaTF4MCpAtaMLTRkxmUzk=
 			</data>
 		</dict>
 		<key>www/index.html</key>
@@ -1062,50 +1046,6 @@
 			<key>hash2</key>
 			<data>
 			75fkIus2+MF7kZSUTo0HFvPQWqyneMrHDoQXHcvK/fk=
-			</data>
-		</dict>
-		<key>www/plugins/cordova-plugin-geolocation/www/Coordinates.js</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			B+vlNAwNL/8E91a2w8xN/QZtP9o=
-			</data>
-			<key>hash2</key>
-			<data>
-			OMLyPkrlZ2a8QPIWTLVOYtPW/6JKdiOvR5V4pO/Covs=
-			</data>
-		</dict>
-		<key>www/plugins/cordova-plugin-geolocation/www/Position.js</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1DZ/xrP/zFT+anCeCYYt+uuQIyU=
-			</data>
-			<key>hash2</key>
-			<data>
-			bajmSfpMjHjoSzrL1TPI1J8K3SrZyVFPoU11T0if/Y8=
-			</data>
-		</dict>
-		<key>www/plugins/cordova-plugin-geolocation/www/PositionError.js</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			NZQ0MpOiURNiYMJS79+bdtSDnzI=
-			</data>
-			<key>hash2</key>
-			<data>
-			W7UeIudqey1Q4CAafAS1HMHib9BAeyvfD0Kj20Dx0m0=
-			</data>
-		</dict>
-		<key>www/plugins/cordova-plugin-geolocation/www/geolocation.js</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			DBMSf1DRKjXfKMDgaSJHjnx+wgI=
-			</data>
-			<key>hash2</key>
-			<data>
-			c0FvNwJUoj6DTFiJbDJ//4pUO/Nc0Pmmq+lh9eVocuE=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-speechrecognition/www/speechRecognition.js</key>
@@ -1167,11 +1107,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vseVntvaPSlb3WtJIVPI/BtKyjE=
+			1WqZ90RZohTT4AL1hKm779zEohA=
 			</data>
 			<key>hash2</key>
 			<data>
-			VE5C5XrwslMppomXb9wzzNa5qCuJEbv1lxP0+D3RJ+o=
+			4E9X/ydekD1ErF+KWDwWIU9J+iK0jNLJaOy97EXpbpc=
 			</data>
 		</dict>
 		<key>www/service-worker.js</key>
