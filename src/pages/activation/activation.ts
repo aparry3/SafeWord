@@ -5,7 +5,9 @@ import { ChangeDetectorRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { WordService } from '../../app/services/word-service'
 import { ProcedureService } from '../../app/services/procedure-service'
+import { ContactService } from '../../app/services/contact-service'
 import { Word } from '../../app/models/word';
+import { Contact } from '../../app/models/contact';
 import { SMS } from '@ionic-native/sms';
 
 @Component({
@@ -19,10 +21,11 @@ export class ActivationPage {
   matchString = "";
   isRecording = false;
   words: Array<Word>;
+  contacts: Array<Contact>;
 
   constructor(public navCtrl: NavController, private speechRecognition: SpeechRecognition,
               private plt: Platform, private cd: ChangeDetectorRef, public wordService: WordService,
-            public procService: ProcedureService, private sms: SMS) {
+            public procService: ProcedureService, public contactService: ContactService, private sms: SMS) {
     this.wordService.getWords().then((d) => {
         this.words = d;
         console.log(this.words)
@@ -36,6 +39,10 @@ export class ActivationPage {
         this.getPermission();
     });
 
+    this.contactService.getContacts().then((c) => {
+        this.contacts = c;
+        console.log(this.contacts)
+    });
 
   }
 
@@ -131,13 +138,44 @@ export class ActivationPage {
   }
 
   consume(word){
+
     if(word.record_audio == true){
       console.log("recording audio")
     }
 
     if(word.send_location == true){
       console.log("sending location")
-      this.sms.send('14043459807', word.text);
+
+      this.wordService.getWords().then((d) => {
+          this.words = d;
+          console.log("here" + d);
+      });
+
+      this.contactService.getContacts().then((c) => {
+          this.contacts = c;
+          console.log("contacts:" + c);
+
+          console.log("TEST")
+          console.log("conats2: " + this.contacts)
+          var word = word.text
+          var phone = ""
+          for(var i = 0; i < this.contacts.length ; i++){
+              console.log("i: " + i)
+              var contact = this.contacts[i];
+              var cWords = contact.words
+              if (cWords !== undefined){
+                for(var j = 0; j < cWords.length ; j++){
+                  var w = cWords[j].text.toLowerCase()
+                  console.log("word: " + w + " j: " + j)
+                  if(w == word){
+                    phone = contact.number
+                  }
+                }
+              }
+            }
+          console.log("phone: " + phone)
+          this.sms.send(phone, word.text);
+      });
     }
 
     if(word.delay == true){
