@@ -11,7 +11,7 @@ Description of release notes section
 List new software features
 
 ```
-Give examples
+a thing
 ```
 
 ### Bug Fixes Made Since Last Release
@@ -19,7 +19,7 @@ Give examples
 List bug fixes since last release
 
 ```
-Give the example
+a thing
 ```
 
 ### Known Bugs & Defects
