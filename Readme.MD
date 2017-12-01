@@ -2,7 +2,7 @@
 
 The application allows users to set custom words to have specific functions. These functions can range from texting a friend, sending a location, or calling authorities. SafeWord provides a user-friendly interface that allows users to add words and decide which tasks are associated with that word. Once a customized word is said aloud while the application is activated, the application will execute the word’s tasks
 
-## SafeWord Version 1.0 Release Notes
+# SafeWord Version 1.0 Release Notes
 
 Description of release notes section
 
@@ -28,7 +28,9 @@ you should also include here any functionality you
 promised the customer but is missing in the release
 
 
-## SafeWord Version 1.0 Install Guide
+
+
+# SafeWord Version 1.0 Install Guide
 
 Intro to this section
 
