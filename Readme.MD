@@ -1,88 +1,72 @@
-# Project Title
+# SafeWord Release Notes & Install Guide
 
-One Paragraph of project description goes here
+The application allows users to set custom words to have specific functions. These functions can range from texting a friend, sending a location, or calling authorities. SafeWord provides a user-friendly interface that allows users to add words and decide which tasks are associated with that word. Once a customized word is said aloud while the application is activated, the application will execute the word’s tasks
 
-## Getting Started
+## SafeWord Version 1.0 Release Notes
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Description of release notes section
 
-### Prerequisites
+### New Software Features for v1.0
 
-What things you need to install the software and how to install them
+List new software features
 
 ```
 Give examples
 ```
 
-### Installing
+### Bug Fixes Made Since Last Release
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
+List bug fixes since last release
 
 ```
 Give the example
 ```
 
-And repeat
+### Known Bugs & Defects
 
-```
-until finished
-```
+you should also include here any functionality you
+promised the customer but is missing in the release
 
-End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+## SafeWord Version 1.0 Install Guide
 
-Explain how to run the automated tests for this system
+Intro to this section
 
-### Break down into end to end tests
+### Pre-requisites
 
-Explain what these tests test and why
+what is the required configuration of software and hardware that
+the customer must have before they can begin the installation process?
 
-```
-Give an example
-```
 
-### And coding style tests
+### Dependent libraries that must be installed
 
-Explain what these tests test and why
+what third party software must be
+installed for your software to function?
 
-```
-Give an example
-```
+### Download instructions
 
-## Deployment
+how will the customer and users get access to the project?
 
-Add additional notes about how to deploy this on a live system
 
-## Built With
+### Build instructions
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+if you are providing the raw source code rather
+than a binary build, how will the customer and users create the required executable
+application?
 
-## Contributing
+### Installation of actual application
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+what steps have to be taken after the software is
+built? What directories are required for installation?
 
-## Versioning
+### Run instructions:
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+what does the user/customer have to do to get the software to
+execute?
 
-## Authors
+### Troubleshooting:
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+what are common errors that occur during installation and what
+is the corrective action?
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
 
