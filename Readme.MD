@@ -6,7 +6,7 @@ The application allows users to set custom words to have specific functions. The
 
 These notes will provide an overview of SafeWord's (v1.0) primary features and how to install it onto an iPhone device.
 
-### New Software Features for v1.0
+### New Software Features (v1.0)
 
 -Add words that have location text triggers by toggling "Send Location" on a created word  
 -Add contacts to text by adding a contact and selecting the words to trigger that contact on  
