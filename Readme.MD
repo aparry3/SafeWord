@@ -1,30 +1,26 @@
 # SafeWord Release Notes & Install Guide
 
-The application allows users to set custom words to have specific functions. These functions can range from texting a friend, sending a location, or calling authorities, though not all are fully implemented yet. SafeWord provides a user-friendly interface that allows users to add words and decide which tasks are associated with that word. Once a customized word is said aloud while the application is activated, the application will execute the word’s tasks
+The application allows users to set custom words to have specific functions. These functions can range from texting a friend, sending a location, or calling authorities, though not all are fully implemented yet. SafeWord provides a user-friendly interface that allows users to add words and decide which tasks are associated with that word. Once a customized word is said aloud while the application is activated, the application will execute the word’s tasks.
 
 # SafeWord Version 1.0 Release Notes
 
-These notes will provide an overview of SafeWords primary features and how to install it onto your iPhone device.
+These notes will provide an overview of SafeWord's (v1.0) primary features and how to install it onto an iPhone device.
 
 ### New Software Features for v1.0
 
-List new software features
-
-```
--Add words that you can toggle text triggers by toggling "Send Location"
--Add contacts to text by adding a contact and select the words you would like to trigger that contact on
--Activate and Deactive the application, allowing users to decide when words will be triggered
+-Add words that have location text triggers by toggling "Send Location" on a created word
+-Add contacts to text by adding a contact and selecting the words to trigger that contact on
+-Activate and deactive the application, allowing users to decide when words will be triggered
 -Say trigger words during activated state to trigger the contacts that the user has set
-```
 
-### Bug Fixes Made Since Last Release
+
+### Bug Fixes Made Since Last Release (v0.5)
 
 List bug fixes since last release
 
-```
 -Contacts added to words will now be contacted instead of a hard-coded contact
 -Activation can now be turned on and off indefinitely
-```
+
 
 ### Known Bugs & Defects
 
