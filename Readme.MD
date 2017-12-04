@@ -39,9 +39,9 @@ iPhone running iOS 10 or later
 
 ### Dependent libraries that must be installed
 
-[Node.js](https://nodejs.org/en/download/)
-[Cordova](https://cordova.apache.org/)
-[Ionic 2](https://ionicframework.com/docs/intro/installation/)
+[Node.js](https://nodejs.org/en/download/)  
+[Cordova](https://cordova.apache.org/)  
+[Ionic 2](https://ionicframework.com/docs/intro/installation/)  
 
 ### Download instructions
 
