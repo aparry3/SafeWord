@@ -8,26 +8,26 @@ These notes will provide an overview of SafeWord's (v1.0) primary features and h
 
 ### New Software Features for v1.0
 
--Add words that have location text triggers by toggling "Send Location" on a created word
--Add contacts to text by adding a contact and selecting the words to trigger that contact on
--Activate and deactive the application, allowing users to decide when words will be triggered
--Say trigger words during activated state to trigger the contacts that the user has set
+-Add words that have location text triggers by toggling "Send Location" on a created word  
+-Add contacts to text by adding a contact and selecting the words to trigger that contact on  
+-Activate and deactive the application, allowing users to decide when words will be triggered  
+-Say trigger words during activated state to trigger the contacts that the user has set  
 
 
 ### Bug Fixes Made Since Last Release (v0.5)
 
 List bug fixes since last release
 
--Contacts added to words will now be contacted instead of a hard-coded contact
--Activation can now be turned on and off indefinitely
+-Contacts added to words will now be contacted instead of a hard-coded contact  
+-Activation can now be turned on and off indefinitely  
 
 
 ### Known Bugs & Defects
 
--Currently only supports texting contacts a predetermined location
--Record audio and delay toggles are placeholders
--Only contacts mapped on the Contact page to words will be triggered, though a mapping to contacts is provided for words
--Must deactivate app for triggers to commence
+-Currently only supports texting contacts a predetermined location  
+-Record audio and delay toggles are placeholders  
+-Only contacts mapped on the Contact page to words will be triggered, though a mapping to contacts is provided for words  
+-Must deactivate app for triggers to commence  
 
 
 # SafeWord Version 1.0 Install Guide
