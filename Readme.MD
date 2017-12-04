@@ -16,8 +16,6 @@ These notes will provide an overview of SafeWord's (v1.0) primary features and h
 
 ### Bug Fixes Made Since Last Release (v0.5)
 
-List bug fixes since last release
-
 -Contacts added to words will now be contacted instead of a hard-coded contact  
 -Activation can now be turned on and off indefinitely  
 
@@ -36,14 +34,14 @@ SafeWord is built on Ionic 2, allowing one to deploy on Android and iPhone. Howe
 
 ### Pre-requisites
 
-XCode Version 9.1 
+XCode Version 9.1  
 iPhone running iOS 10 or later
 
 ### Dependent libraries that must be installed
 
-Node.js
-Cordova
-Ionic 2
+[Node.js](https://nodejs.org/en/download/)
+[Cordova](https://cordova.apache.org/)
+[Ionic 2](https://ionicframework.com/docs/intro/installation/)
 
 ### Download instructions
 
@@ -52,13 +50,13 @@ The project can be directly cloned or downloaded from the SafeWord github: https
 
 ### Build instructions
 
--Make sure to have XCode and dependencies installed
--Download SafeWord project from the Github
--Navigate to the top level of the project in your terminal
-run:
-ionic cordova build ios --prod 
+-Make sure to have XCode and dependencies installed  
+-Download SafeWord project from the Github  
+-Navigate to the top level of the project in your terminal  
+run:  
+ionic cordova build ios --prod  
 
-to build the project. You may have to run the following if the iOS platform is missing:
+to build the project. You may have to run the following if the iOS platform is missing:  
 
 ionic cordova platform add ios
 
@@ -66,9 +64,9 @@ ionic cordova platform add ios
 
 ### Installation of actual application
 
-Once the project is built, open it within XCode by navigating the SafeWord/platforms/ios/MyApp.xcodeproj
+Once the project is built, open it within XCode by navigating to SafeWord/platforms/ios/MyApp.xcodeproj
 
-Plug in your iPhone device. In XCode, select the target device for MyApp to be your device. Then, under Product in XCode's toolbar and select Run. An error will appear saying that the app needs proper permissions on your device to run. On your iPhone, navigate to Settings, then General, and then Device Management. This is where you can allow your device to accept the app to run. After saying you trust this developer, hit run again and the application will deploy and automatically open up.
+Plug in your iPhone device. In XCode, select the target device for MyApp to be your device. Then, under Product, in XCode's toolbar, select Run. An error will appear saying that the app needs proper permissions on your device to run. On your iPhone, navigate to Settings, then General, and then Device Management. This is where you can allow your device to accept the app to run. After saying you trust this developer, hit run again and the application will deploy and automatically open.
 
 ### Run instructions:
 
