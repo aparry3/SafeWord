@@ -74,7 +74,11 @@ The app will now run on your phone like any other iPhone application. Serious bu
 
 ### Troubleshooting:
 
-Older versions of XCode will not work with the latest iOS, and visa versa. Make sure to have both fully updated.
+If you run into problems downloading and running the solution the following may help:  
+- Older versions of XCode will not work with the latest iOS, and visa versa. Make sure to have both fully updated  
+- Redeploy the application by deleting and redownloading the SafeWord directory (Configuration files could have been tampered by running otherionic cordova commands)  
+- Check your computer's applications to be sure the necessary pre-requisites described above are installed  
+- Try turning your computer off and then on again (This will ensure that any restart dependent installations have occured)
 
 
 
