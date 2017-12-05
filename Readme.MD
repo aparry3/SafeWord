@@ -6,7 +6,7 @@ The application allows users to set custom words to have specific functions. The
 
 These notes will provide an overview of SafeWord's (v1.0) primary features and how to install it onto an iPhone device.
 
-### New Software Features (v1.0)
+### New Software Features (v1.0 12/04/2017)
 
 -Add words that have location text triggers by toggling "Send Location" on a created word  
 -Add contacts to text by adding a contact and selecting the words to trigger that contact on  
@@ -28,7 +28,7 @@ These notes will provide an overview of SafeWord's (v1.0) primary features and h
 -Must deactivate app for triggers to commence  
 
 
-# SafeWord Version 1.0 Install Guide
+# SafeWord Install Guide
 
 SafeWord is built on Ionic 2, allowing one to deploy on Android and iPhone. However, the code is currently written to be optimized for iOS, so this guide will be geared towards iPhone installation and execution.
 
